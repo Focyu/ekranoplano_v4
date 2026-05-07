@@ -1,0 +1,338 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="xy_reference_wheel">
+    <static>true</static>
+    <!-- Rosa de referencia XY: 36 líneas radiales cada 10° como rayos de rueda -->
+    <!-- X+ = rojo brillante | Y+ = verde brillante | opuestos = oscuros | resto = gris -->
+    <model name="xy_reference_wheel">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+
+      <!-- 0deg = X+ ROJO -->
+      <link name="line_x_pos">
+        <visual name="vis_x_pos">
+          <pose>250.0000 0.0000 0.02 0 1.570796 0.000000</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 10deg -->
+      <link name="line_ray_010">
+        <visual name="vis_ray_010">
+          <pose>246.2019 43.4120 0.02 0 1.570796 0.174533</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 20deg -->
+      <link name="line_ray_020">
+        <visual name="vis_ray_020">
+          <pose>234.9232 85.5050 0.02 0 1.570796 0.349066</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 30deg -->
+      <link name="line_ray_030">
+        <visual name="vis_ray_030">
+          <pose>216.5064 125.0000 0.02 0 1.570796 0.523599</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 40deg -->
+      <link name="line_ray_040">
+        <visual name="vis_ray_040">
+          <pose>191.5111 160.6969 0.02 0 1.570796 0.698132</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 50deg -->
+      <link name="line_ray_050">
+        <visual name="vis_ray_050">
+          <pose>160.6969 191.5111 0.02 0 1.570796 0.872665</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 60deg -->
+      <link name="line_ray_060">
+        <visual name="vis_ray_060">
+          <pose>125.0000 216.5064 0.02 0 1.570796 1.047198</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 70deg -->
+      <link name="line_ray_070">
+        <visual name="vis_ray_070">
+          <pose>85.5050 234.9232 0.02 0 1.570796 1.221730</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 80deg -->
+      <link name="line_ray_080">
+        <visual name="vis_ray_080">
+          <pose>43.4120 246.2019 0.02 0 1.570796 1.396263</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 90deg = Y+ VERDE -->
+      <link name="line_y_pos">
+        <visual name="vis_y_pos">
+          <pose>0.0000 250.0000 0.02 0 1.570796 1.570796</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 100deg -->
+      <link name="line_ray_100">
+        <visual name="vis_ray_100">
+          <pose>-43.4120 246.2019 0.02 0 1.570796 1.745329</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 110deg -->
+      <link name="line_ray_110">
+        <visual name="vis_ray_110">
+          <pose>-85.5050 234.9232 0.02 0 1.570796 1.919862</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 120deg -->
+      <link name="line_ray_120">
+        <visual name="vis_ray_120">
+          <pose>-125.0000 216.5064 0.02 0 1.570796 2.094395</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 130deg -->
+      <link name="line_ray_130">
+        <visual name="vis_ray_130">
+          <pose>-160.6969 191.5111 0.02 0 1.570796 2.268928</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 140deg -->
+      <link name="line_ray_140">
+        <visual name="vis_ray_140">
+          <pose>-191.5111 160.6969 0.02 0 1.570796 2.443461</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 150deg -->
+      <link name="line_ray_150">
+        <visual name="vis_ray_150">
+          <pose>-216.5064 125.0000 0.02 0 1.570796 2.617994</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 160deg -->
+      <link name="line_ray_160">
+        <visual name="vis_ray_160">
+          <pose>-234.9232 85.5050 0.02 0 1.570796 2.792527</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 170deg -->
+      <link name="line_ray_170">
+        <visual name="vis_ray_170">
+          <pose>-246.2019 43.4120 0.02 0 1.570796 2.967060</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 180deg = X- ROJO OSCURO -->
+      <link name="line_x_neg">
+        <visual name="vis_x_neg">
+          <pose>-250.0000 0.0000 0.02 0 1.570796 3.141593</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.8 0.3 0.3 1</ambient><diffuse>0.8 0.3 0.3 1</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 190deg -->
+      <link name="line_ray_190">
+        <visual name="vis_ray_190">
+          <pose>-246.2019 -43.4120 0.02 0 1.570796 3.316126</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 200deg -->
+      <link name="line_ray_200">
+        <visual name="vis_ray_200">
+          <pose>-234.9232 -85.5050 0.02 0 1.570796 3.490659</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 210deg -->
+      <link name="line_ray_210">
+        <visual name="vis_ray_210">
+          <pose>-216.5064 -125.0000 0.02 0 1.570796 3.665191</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 220deg -->
+      <link name="line_ray_220">
+        <visual name="vis_ray_220">
+          <pose>-191.5111 -160.6969 0.02 0 1.570796 3.839724</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 230deg -->
+      <link name="line_ray_230">
+        <visual name="vis_ray_230">
+          <pose>-160.6969 -191.5111 0.02 0 1.570796 4.014257</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 240deg -->
+      <link name="line_ray_240">
+        <visual name="vis_ray_240">
+          <pose>-125.0000 -216.5064 0.02 0 1.570796 4.188790</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 250deg -->
+      <link name="line_ray_250">
+        <visual name="vis_ray_250">
+          <pose>-85.5050 -234.9232 0.02 0 1.570796 4.363323</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 260deg -->
+      <link name="line_ray_260">
+        <visual name="vis_ray_260">
+          <pose>-43.4120 -246.2019 0.02 0 1.570796 4.537856</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 270deg = Y- VERDE OSCURO -->
+      <link name="line_y_neg">
+        <visual name="vis_y_neg">
+          <pose>0.0000 -250.0000 0.02 0 1.570796 4.712389</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.3 0.8 0.3 1</ambient><diffuse>0.3 0.8 0.3 1</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 280deg -->
+      <link name="line_ray_280">
+        <visual name="vis_ray_280">
+          <pose>43.4120 -246.2019 0.02 0 1.570796 4.886922</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 290deg -->
+      <link name="line_ray_290">
+        <visual name="vis_ray_290">
+          <pose>85.5050 -234.9232 0.02 0 1.570796 5.061455</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 300deg -->
+      <link name="line_ray_300">
+        <visual name="vis_ray_300">
+          <pose>125.0000 -216.5064 0.02 0 1.570796 5.235988</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 310deg -->
+      <link name="line_ray_310">
+        <visual name="vis_ray_310">
+          <pose>160.6969 -191.5111 0.02 0 1.570796 5.410521</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 320deg -->
+      <link name="line_ray_320">
+        <visual name="vis_ray_320">
+          <pose>191.5111 -160.6969 0.02 0 1.570796 5.585054</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 330deg -->
+      <link name="line_ray_330">
+        <visual name="vis_ray_330">
+          <pose>216.5064 -125.0000 0.02 0 1.570796 5.759587</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 340deg -->
+      <link name="line_ray_340">
+        <visual name="vis_ray_340">
+          <pose>234.9232 -85.5050 0.02 0 1.570796 5.934120</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+      <!-- 350deg -->
+      <link name="line_ray_350">
+        <visual name="vis_ray_350">
+          <pose>246.2019 -43.4120 0.02 0 1.570796 6.108652</pose>
+          <geometry><cylinder><radius>0.05</radius><length>22000</length></cylinder></geometry>
+          <material><ambient>0.7 0.7 0.7 0.6</ambient><diffuse>0.7 0.7 0.7 0.6</diffuse></material>
+        </visual>
+      </link>
+
+    </model>
+
+  </model>
+</sdf>

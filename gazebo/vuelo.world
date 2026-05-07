@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <gravity>0 0 0</gravity> 
+
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+      </ros>
+      <update_rate>100.0</update_rate>
+      <publish_model_states>false</publish_model_states>
+      <publish_link_states>false</publish_link_states>
+    </plugin>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="ocean">
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name="ocean_link">
+        <visual name="ocean_visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20000 20000</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Water</name>
+            </script>
+            <ambient>0.0 0.35 0.60 0.85</ambient>
+            <diffuse>0.0 0.50 0.80 0.85</diffuse>
+            <specular>0.4 0.4 0.4 1.0</specular>
+          </material>
+          <plugin name="wave_visual" filename="libgazebo_ros_wave_visual.so">
+            <ros>
+              <namespace>/ocean</namespace>
+            </ros>
+            <topic>wave_height</topic>
+            <update_rate>20.0</update_rate>
+          </plugin>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Modelo cargado desde la carpeta local -->
+    <include>
+      <name>ekranoplano</name>
+      <uri>model://mi_ekranoplano</uri>
+      <pose>0 0 1 0 0 0</pose> 
+    </include>
+
+    <gui fullscreen='0'>
+
+      <camera name='user_camera'>
+        <pose>0 0 1 0 0 1.5708</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+      <!-- Se ha eliminado user_camera de aquí -->
+      <plugin name='keyboard' filename='libKeyboardGUIPlugin.so'/>
+
+      <grid>
+        <origin>0 0 0</origin>
+        <size>20000 20000</size> 
+        <cell_size>100 100</cell_size> 
+        <cell_count>200</cell_count>
+      </grid>
+    </gui>
+
+    <!-- Rosa de referencia XY cargada externamente -->
+    <include>
+      <name>ejes_radiales</name>
+      <uri>model://rosa_referencia</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
