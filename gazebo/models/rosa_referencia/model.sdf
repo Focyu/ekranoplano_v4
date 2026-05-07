@@ -7,15 +7,15 @@
     <!-- === EJE X+ ROJO === -->
     <link name="axis_x_body">
       <visual name="vis">
-        <pose>10 0 0  0 1.5707963 0</pose>
-        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
+        <pose>1000 0 0  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>2000</length></cylinder></geometry>
         <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
       </visual>
     </link>
     <link name="axis_x_tip">
       <visual name="vis">
-        <pose>21.5 0 0  0 1.5707963 0</pose>
-        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
+        <pose>2008 0 0  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>16</length></cylinder></geometry>
         <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
       </visual>
     </link>
@@ -23,15 +23,15 @@
     <!-- === EJE Y+ VERDE === -->
     <link name="axis_y_body">
       <visual name="vis">
-        <pose>0 10 0  1.5707963 0 0</pose>
-        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
+        <pose>0 1000 0  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>2000</length></cylinder></geometry>
         <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
       </visual>
     </link>
     <link name="axis_y_tip">
       <visual name="vis">
-        <pose>0 21.5 0  1.5707963 0 0</pose>
-        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
+        <pose>0 2008 0  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>16</length></cylinder></geometry>
         <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
       </visual>
     </link>
@@ -39,15 +39,15 @@
     <!-- === EJE Z+ AZUL === -->
     <link name="axis_z_body">
       <visual name="vis">
-        <pose>0 0 10  0 0 0</pose>
-        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
+        <pose>0 0 1000  0 0 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>2000</length></cylinder></geometry>
         <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
       </visual>
     </link>
     <link name="axis_z_tip">
       <visual name="vis">
-        <pose>0 0 21.5  0 0 0</pose>
-        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
+        <pose>0 0 2008  0 0 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>16</length></cylinder></geometry>
         <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
       </visual>
     </link>
