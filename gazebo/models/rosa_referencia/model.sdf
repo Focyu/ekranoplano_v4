@@ -5,55 +5,49 @@
     <pose>0 0 0.02 0 0 0</pose>
 
     <!-- === EJE X+ ROJO === -->
-    <!-- Cilindro cuerpo X -->
     <link name="axis_x_body">
       <visual name="vis">
-        <pose>125 0 0  0 1.5707963 0</pose>
-        <geometry><cylinder><radius>1.5</radius><length>250</length></cylinder></geometry>
+        <pose>10 0 0  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
         <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
       </visual>
     </link>
-    <!-- Cono punta X -->
     <link name="axis_x_tip">
       <visual name="vis">
-        <pose>258 0 0  0 1.5707963 0</pose>
-        <geometry><cylinder><radius>4</radius><length>16</length></cylinder></geometry>
+        <pose>21.5 0 0  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
         <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
       </visual>
     </link>
 
     <!-- === EJE Y+ VERDE === -->
-    <!-- Cilindro cuerpo Y -->
     <link name="axis_y_body">
       <visual name="vis">
-        <pose>0 125 0  1.5707963 0 0</pose>
-        <geometry><cylinder><radius>1.5</radius><length>250</length></cylinder></geometry>
+        <pose>0 10 0  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
         <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
       </visual>
     </link>
-    <!-- Cono punta Y -->
     <link name="axis_y_tip">
       <visual name="vis">
-        <pose>0 258 0  1.5707963 0 0</pose>
-        <geometry><cylinder><radius>4</radius><length>16</length></cylinder></geometry>
+        <pose>0 21.5 0  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
         <material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material>
       </visual>
     </link>
 
     <!-- === EJE Z+ AZUL === -->
-    <!-- Cilindro cuerpo Z -->
     <link name="axis_z_body">
       <visual name="vis">
-        <pose>0 0 125  0 0 0</pose>
-        <geometry><cylinder><radius>1.5</radius><length>250</length></cylinder></geometry>
+        <pose>0 0 10  0 0 0</pose>
+        <geometry><cylinder><radius>0.15</radius><length>20</length></cylinder></geometry>
         <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
       </visual>
     </link>
-    <!-- Cono punta Z -->
     <link name="axis_z_tip">
       <visual name="vis">
-        <pose>0 0 258  0 0 0</pose>
-        <geometry><cylinder><radius>4</radius><length>16</length></cylinder></geometry>
+        <pose>0 0 21.5  0 0 0</pose>
+        <geometry><cylinder><radius>0.4</radius><length>3</length></cylinder></geometry>
         <material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material>
       </visual>
     </link>
