@@ -8,6 +8,7 @@
   <license>BSD</license>
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
   <depend>gazebo_msgs</depend>
+  <depend>nav_msgs</depend>
   <depend>rclcpp</depend>
   <depend>rosgraph_msgs</depend>
   <depend>sensor_msgs</depend>
@@ -18,4 +19,4 @@
     <build_type>ament_cmake</build_type>
   </export>
 </package>
-<!-- Generated on Wed May 06 19:40:35 2026 -->
+<!-- Generated on Thu May 07 21:51:28 2026 -->

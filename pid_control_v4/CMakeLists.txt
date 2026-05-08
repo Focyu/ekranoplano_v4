@@ -33,6 +33,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
 find_package( gazebo_msgs REQUIRED)
+find_package( nav_msgs REQUIRED)
 find_package( rclcpp REQUIRED)
 find_package( rosgraph_msgs REQUIRED)
 find_package( sensor_msgs REQUIRED)
@@ -85,6 +86,7 @@ target_compile_options(pid_control_V4 PRIVATE
 ament_target_dependencies(
   pid_control_V4
   "gazebo_msgs"
+  "nav_msgs"
   "rclcpp"
   "rosgraph_msgs"
   "sensor_msgs"
@@ -118,4 +120,4 @@ add_custom_command(
 				   )				   
 endforeach(file_i)
 ament_package()
-# Generated on Wed May 06 19:40:35 2026
+# Generated on Thu May 07 21:51:28 2026

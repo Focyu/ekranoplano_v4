@@ -6,9 +6,9 @@
  *
  * Code generation for model "pid_control_V4".
  *
- * Model version              : 12.163
+ * Model version              : 12.168
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C++ source code generated on : Wed May  6 19:40:05 2026
+ * C++ source code generated on : Thu May  7 21:50:57 2026
  *
  * Target selection: ert.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -134,6 +134,42 @@ struct SL_Bus_std_msgs_Header
   SL_Bus_builtin_interfaces_Time stamp;
   uint8_T frame_id[128];
   SL_Bus_ROSVariableLengthArrayInfo frame_id_SL_Info;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_PoseWithCovariance_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_PoseWithCovariance_
+
+struct SL_Bus_geometry_msgs_PoseWithCovariance
+{
+  SL_Bus_geometry_msgs_Pose pose;
+  real_T covariance[36];
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_TwistWithCovariance_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_geometry_msgs_TwistWithCovariance_
+
+struct SL_Bus_geometry_msgs_TwistWithCovariance
+{
+  SL_Bus_geometry_msgs_Twist twist;
+  real_T covariance[36];
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_nav_msgs_Odometry_
+#define DEFINED_TYPEDEF_FOR_SL_Bus_nav_msgs_Odometry_
+
+struct SL_Bus_nav_msgs_Odometry
+{
+  SL_Bus_std_msgs_Header header;
+  uint8_T child_frame_id[128];
+  SL_Bus_ROSVariableLengthArrayInfo child_frame_id_SL_Info;
+  SL_Bus_geometry_msgs_PoseWithCovariance pose;
+  SL_Bus_geometry_msgs_TwistWithCovariance twist;
 };
 
 #endif

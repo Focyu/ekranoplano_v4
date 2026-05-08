@@ -7,9 +7,12 @@
 #include <gazebo_msgs/srv/set_entity_state.hpp>
 #include <geometry_msgs/msg/point.hpp>
 #include <geometry_msgs/msg/pose.hpp>
+#include <geometry_msgs/msg/pose_with_covariance.hpp>
 #include <geometry_msgs/msg/quaternion.hpp>
 #include <geometry_msgs/msg/twist.hpp>
+#include <geometry_msgs/msg/twist_with_covariance.hpp>
 #include <geometry_msgs/msg/vector3.hpp>
+#include <nav_msgs/msg/odometry.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <std_msgs/msg/bool.hpp>
 #include <std_msgs/msg/float64.hpp>
@@ -36,14 +39,23 @@
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Pose& msgPtr, SL_Bus_geometry_msgs_Pose const* busPtr);
 [[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_Pose* busPtr, const geometry_msgs::msg::Pose& msgPtr);
 
+[[maybe_unused]] static void convertFromBus(geometry_msgs::msg::PoseWithCovariance& msgPtr, SL_Bus_geometry_msgs_PoseWithCovariance const* busPtr);
+[[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_PoseWithCovariance* busPtr, const geometry_msgs::msg::PoseWithCovariance& msgPtr);
+
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Quaternion& msgPtr, SL_Bus_geometry_msgs_Quaternion const* busPtr);
 [[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_Quaternion* busPtr, const geometry_msgs::msg::Quaternion& msgPtr);
 
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Twist& msgPtr, SL_Bus_geometry_msgs_Twist const* busPtr);
 [[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_Twist* busPtr, const geometry_msgs::msg::Twist& msgPtr);
 
+[[maybe_unused]] static void convertFromBus(geometry_msgs::msg::TwistWithCovariance& msgPtr, SL_Bus_geometry_msgs_TwistWithCovariance const* busPtr);
+[[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_TwistWithCovariance* busPtr, const geometry_msgs::msg::TwistWithCovariance& msgPtr);
+
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Vector3& msgPtr, SL_Bus_geometry_msgs_Vector3 const* busPtr);
 [[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_Vector3* busPtr, const geometry_msgs::msg::Vector3& msgPtr);
+
+[[maybe_unused]] static void convertFromBus(nav_msgs::msg::Odometry& msgPtr, SL_Bus_nav_msgs_Odometry const* busPtr);
+[[maybe_unused]] static void convertToBus(SL_Bus_nav_msgs_Odometry* busPtr, const nav_msgs::msg::Odometry& msgPtr);
 
 [[maybe_unused]] static void convertFromBus(sensor_msgs::msg::Imu& msgPtr, SL_Bus_sensor_msgs_Imu const* busPtr);
 [[maybe_unused]] static void convertToBus(SL_Bus_sensor_msgs_Imu* busPtr, const sensor_msgs::msg::Imu& msgPtr);
@@ -175,6 +187,25 @@
 }
 
 
+// Conversions between SL_Bus_geometry_msgs_PoseWithCovariance and geometry_msgs::msg::PoseWithCovariance
+
+[[maybe_unused]] static void convertFromBus(geometry_msgs::msg::PoseWithCovariance& msgPtr, SL_Bus_geometry_msgs_PoseWithCovariance const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/PoseWithCovariance");
+
+  convertFromBusFixedPrimitiveArray(msgPtr.covariance, busPtr->covariance);
+  convertFromBus(msgPtr.pose, &busPtr->pose);
+}
+
+[[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_PoseWithCovariance* busPtr, const geometry_msgs::msg::PoseWithCovariance& msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/PoseWithCovariance");
+
+  convertToBusFixedPrimitiveArray(busPtr->covariance, msgPtr.covariance, slros::NoopWarning());
+  convertToBus(&busPtr->pose, msgPtr.pose);
+}
+
+
 // Conversions between SL_Bus_geometry_msgs_Quaternion and geometry_msgs::msg::Quaternion
 
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Quaternion& msgPtr, SL_Bus_geometry_msgs_Quaternion const* busPtr)
@@ -217,6 +248,25 @@
 }
 
 
+// Conversions between SL_Bus_geometry_msgs_TwistWithCovariance and geometry_msgs::msg::TwistWithCovariance
+
+[[maybe_unused]] static void convertFromBus(geometry_msgs::msg::TwistWithCovariance& msgPtr, SL_Bus_geometry_msgs_TwistWithCovariance const* busPtr)
+{
+  const std::string rosMessageType("geometry_msgs/TwistWithCovariance");
+
+  convertFromBusFixedPrimitiveArray(msgPtr.covariance, busPtr->covariance);
+  convertFromBus(msgPtr.twist, &busPtr->twist);
+}
+
+[[maybe_unused]] static void convertToBus(SL_Bus_geometry_msgs_TwistWithCovariance* busPtr, const geometry_msgs::msg::TwistWithCovariance& msgPtr)
+{
+  const std::string rosMessageType("geometry_msgs/TwistWithCovariance");
+
+  convertToBusFixedPrimitiveArray(busPtr->covariance, msgPtr.covariance, slros::NoopWarning());
+  convertToBus(&busPtr->twist, msgPtr.twist);
+}
+
+
 // Conversions between SL_Bus_geometry_msgs_Vector3 and geometry_msgs::msg::Vector3
 
 [[maybe_unused]] static void convertFromBus(geometry_msgs::msg::Vector3& msgPtr, SL_Bus_geometry_msgs_Vector3 const* busPtr)
@@ -235,6 +285,29 @@
   busPtr->x =  msgPtr.x;
   busPtr->y =  msgPtr.y;
   busPtr->z =  msgPtr.z;
+}
+
+
+// Conversions between SL_Bus_nav_msgs_Odometry and nav_msgs::msg::Odometry
+
+[[maybe_unused]] static void convertFromBus(nav_msgs::msg::Odometry& msgPtr, SL_Bus_nav_msgs_Odometry const* busPtr)
+{
+  const std::string rosMessageType("nav_msgs/Odometry");
+
+  convertFromBusVariablePrimitiveArray(msgPtr.child_frame_id, busPtr->child_frame_id, busPtr->child_frame_id_SL_Info);
+  convertFromBus(msgPtr.header, &busPtr->header);
+  convertFromBus(msgPtr.pose, &busPtr->pose);
+  convertFromBus(msgPtr.twist, &busPtr->twist);
+}
+
+[[maybe_unused]] static void convertToBus(SL_Bus_nav_msgs_Odometry* busPtr, const nav_msgs::msg::Odometry& msgPtr)
+{
+  const std::string rosMessageType("nav_msgs/Odometry");
+
+  convertToBusVariablePrimitiveArray(busPtr->child_frame_id, busPtr->child_frame_id_SL_Info, msgPtr.child_frame_id, slros::EnabledWarning(rosMessageType, "child_frame_id"));
+  convertToBus(&busPtr->header, msgPtr.header);
+  convertToBus(&busPtr->pose, msgPtr.pose);
+  convertToBus(&busPtr->twist, msgPtr.twist);
 }
 
 
