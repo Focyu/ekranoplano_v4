@@ -84,5 +84,888 @@
       </visual>
     </link>
 
+    <!-- === MALLA DE REFERENCIA XY (espaciado 100 m, extensión ±2000 m) === -->
+    <!-- z=0.05 para evitar z-fighting con el océano, color sólido blanco tenue -->
+    <link name="grid_x_0">
+      <visual name="vis">
+        <pose>0 -2000 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_1">
+      <visual name="vis">
+        <pose>0 -1900 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_2">
+      <visual name="vis">
+        <pose>0 -1800 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_3">
+      <visual name="vis">
+        <pose>0 -1700 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_4">
+      <visual name="vis">
+        <pose>0 -1600 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_5">
+      <visual name="vis">
+        <pose>0 -1500 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_6">
+      <visual name="vis">
+        <pose>0 -1400 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_7">
+      <visual name="vis">
+        <pose>0 -1300 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_8">
+      <visual name="vis">
+        <pose>0 -1200 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_9">
+      <visual name="vis">
+        <pose>0 -1100 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_10">
+      <visual name="vis">
+        <pose>0 -1000 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_11">
+      <visual name="vis">
+        <pose>0 -900 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_12">
+      <visual name="vis">
+        <pose>0 -800 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_13">
+      <visual name="vis">
+        <pose>0 -700 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_14">
+      <visual name="vis">
+        <pose>0 -600 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_15">
+      <visual name="vis">
+        <pose>0 -500 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_16">
+      <visual name="vis">
+        <pose>0 -400 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_17">
+      <visual name="vis">
+        <pose>0 -300 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_18">
+      <visual name="vis">
+        <pose>0 -200 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_19">
+      <visual name="vis">
+        <pose>0 -100 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_20">
+      <visual name="vis">
+        <pose>0 100 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_21">
+      <visual name="vis">
+        <pose>0 200 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_22">
+      <visual name="vis">
+        <pose>0 300 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_23">
+      <visual name="vis">
+        <pose>0 400 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_24">
+      <visual name="vis">
+        <pose>0 500 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_25">
+      <visual name="vis">
+        <pose>0 600 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_26">
+      <visual name="vis">
+        <pose>0 700 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_27">
+      <visual name="vis">
+        <pose>0 800 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_28">
+      <visual name="vis">
+        <pose>0 900 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_29">
+      <visual name="vis">
+        <pose>0 1000 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_30">
+      <visual name="vis">
+        <pose>0 1100 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_31">
+      <visual name="vis">
+        <pose>0 1200 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_32">
+      <visual name="vis">
+        <pose>0 1300 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_33">
+      <visual name="vis">
+        <pose>0 1400 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_34">
+      <visual name="vis">
+        <pose>0 1500 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_35">
+      <visual name="vis">
+        <pose>0 1600 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_36">
+      <visual name="vis">
+        <pose>0 1700 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_37">
+      <visual name="vis">
+        <pose>0 1800 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_38">
+      <visual name="vis">
+        <pose>0 1900 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_x_39">
+      <visual name="vis">
+        <pose>0 2000 0.05  0 1.5707963 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_0">
+      <visual name="vis">
+        <pose>-2000 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_1">
+      <visual name="vis">
+        <pose>-1900 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_2">
+      <visual name="vis">
+        <pose>-1800 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_3">
+      <visual name="vis">
+        <pose>-1700 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_4">
+      <visual name="vis">
+        <pose>-1600 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_5">
+      <visual name="vis">
+        <pose>-1500 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_6">
+      <visual name="vis">
+        <pose>-1400 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_7">
+      <visual name="vis">
+        <pose>-1300 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_8">
+      <visual name="vis">
+        <pose>-1200 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_9">
+      <visual name="vis">
+        <pose>-1100 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_10">
+      <visual name="vis">
+        <pose>-1000 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_11">
+      <visual name="vis">
+        <pose>-900 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_12">
+      <visual name="vis">
+        <pose>-800 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_13">
+      <visual name="vis">
+        <pose>-700 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_14">
+      <visual name="vis">
+        <pose>-600 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_15">
+      <visual name="vis">
+        <pose>-500 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_16">
+      <visual name="vis">
+        <pose>-400 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_17">
+      <visual name="vis">
+        <pose>-300 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_18">
+      <visual name="vis">
+        <pose>-200 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_19">
+      <visual name="vis">
+        <pose>-100 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_20">
+      <visual name="vis">
+        <pose>100 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_21">
+      <visual name="vis">
+        <pose>200 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_22">
+      <visual name="vis">
+        <pose>300 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_23">
+      <visual name="vis">
+        <pose>400 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_24">
+      <visual name="vis">
+        <pose>500 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_25">
+      <visual name="vis">
+        <pose>600 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_26">
+      <visual name="vis">
+        <pose>700 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_27">
+      <visual name="vis">
+        <pose>800 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_28">
+      <visual name="vis">
+        <pose>900 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_29">
+      <visual name="vis">
+        <pose>1000 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_30">
+      <visual name="vis">
+        <pose>1100 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_31">
+      <visual name="vis">
+        <pose>1200 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_32">
+      <visual name="vis">
+        <pose>1300 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_33">
+      <visual name="vis">
+        <pose>1400 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_34">
+      <visual name="vis">
+        <pose>1500 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_35">
+      <visual name="vis">
+        <pose>1600 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_36">
+      <visual name="vis">
+        <pose>1700 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_37">
+      <visual name="vis">
+        <pose>1800 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_38">
+      <visual name="vis">
+        <pose>1900 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+    <link name="grid_y_39">
+      <visual name="vis">
+        <pose>2000 0 0.05  1.5707963 0 0</pose>
+        <geometry><cylinder><radius>0.08</radius><length>4000</length></cylinder></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+          <transparency>0.5</transparency>
+        </material>
+      </visual>
+    </link>
+
   </model>
 </sdf>
