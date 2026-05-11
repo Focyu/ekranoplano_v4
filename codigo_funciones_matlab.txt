@@ -1,7 +1,7 @@
 ==========================================================
 REPORTE DE CÓDIGO INTERNO - MATLAB FUNCTIONS
 Modelo: pid_control_V4
-Fecha: 07-May-2026 21:52:17
+Fecha: 10-May-2026 23:46:29
 ==========================================================
 
 ----------------------------------------------------------
@@ -23,12 +23,12 @@ end
 
 
 ----------------------------------------------------------
-BLOQUE [2]: pid_control_V4/MATLAB Function-IMU2
+BLOQUE [2]: pid_control_V4/MATLAB Function-ned_to_PoseStamped
 ----------------------------------------------------------
 function [stringOut, lengthOut] = stringToROS()
     
     % Define la palabra exacta (fíjate que sea el mismo nombre que en el .world)
-    miTexto = 'ekranoplano';
+    miTexto = 'world';
     
     % Crea el vector de 128 posiciones
     stringOut = zeros(128, 1, 'uint8');
@@ -41,7 +41,43 @@ end
 
 
 ----------------------------------------------------------
-BLOQUE [3]: pid_control_V4/MATLAB Function-Odometry
+BLOQUE [3]: pid_control_V4/MATLAB Function-IMU2
+----------------------------------------------------------
+function [stringOut, lengthOut] = stringToROS()
+    
+    % Define la palabra exacta (fíjate que sea el mismo nombre que en el .world)
+    miTexto = 'ekranoplano-imu';
+    
+    % Crea el vector de 128 posiciones
+    stringOut = zeros(128, 1, 'uint8');
+    stringOut(1:length(miTexto)) = uint8(miTexto);
+    
+    % Calcula la longitud para ROS (en tipo uint32)
+    lengthOut = uint32(length(miTexto));
+    
+end
+
+
+----------------------------------------------------------
+BLOQUE [4]: pid_control_V4/MATLAB Function-ned_to_TwistStamped
+----------------------------------------------------------
+function [stringOut, lengthOut] = stringToROS()
+    
+    % Define la palabra exacta (fíjate que sea el mismo nombre que en el .world)
+    miTexto = 'world';
+    
+    % Crea el vector de 128 posiciones
+    stringOut = zeros(128, 1, 'uint8');
+    stringOut(1:length(miTexto)) = uint8(miTexto);
+    
+    % Calcula la longitud para ROS (en tipo uint32)
+    lengthOut = uint32(length(miTexto));
+    
+end
+
+
+----------------------------------------------------------
+BLOQUE [5]: pid_control_V4/MATLAB Function-Odometry
 ----------------------------------------------------------
 function [str_out, currentLen, receivedLen] = childFrameID()
 
@@ -55,7 +91,7 @@ function [str_out, currentLen, receivedLen] = childFrameID()
 end
 
 ----------------------------------------------------------
-BLOQUE [4]: pid_control_V4/MATLAB Function-Odometry1
+BLOQUE [6]: pid_control_V4/MATLAB Function-Odometry1
 ----------------------------------------------------------
 function [str_out, currentLen, receivedLen] = childFrameID()
     
@@ -69,7 +105,97 @@ function [str_out, currentLen, receivedLen] = childFrameID()
 end
 
 ----------------------------------------------------------
-BLOQUE [5]: pid_control_V4/MATLAB Function1
+BLOQUE [7]: pid_control_V4/MATLAB Function-ned_to_PoseStaamped
+----------------------------------------------------------
+function [px_out, py_out, pz_out, x_out, y_out, z_out, w_out] = ...
+         ned_to_PoseStaamped(w_in, x_in, y_in, z_in, px_ned, py_ned, pz_ned)
+
+% Posición NED→ENU — intercambiados para desplazar en Y (verde)
+px_out =  double(px_ned);   % ← cambiado
+py_out =  double(py_ned);   % ← cambiado
+pz_out = -double(pz_ned);
+
+% Quaternion NED→ENU + 90° yaw invertido
+cz =  0.7071; sz = -0.7071;   % ← sz negativo
+w1 = cz*w_in - sz*z_in;
+x1 = cz*x_in - sz*y_in;
+y1 = cz*y_in + sz*x_in;
+z1 = cz*z_in + sz*w_in;
+
+w_out =  double(w1);
+x_out =  double(y1);
+y_out =  double(x1);
+z_out = -double(z1);
+end
+
+----------------------------------------------------------
+BLOQUE [8]: pid_control_V4/MATLAB Function-ned_to_gazebo
+----------------------------------------------------------
+function [w_out, x_out, y_out, z_out, px_out, py_out, pz_out] = ...
+         ned_to_gazebo(w_in, x_in, y_in, z_in, px_ned, py_ned, pz_ned)
+
+% --- Posicion NED -> Gazebo ENU ---
+px_out = -px_ned;   % derecha NED  → +X Gazebo
+py_out = py_ned;   % adelante NED → +Y Gazebo (morro apunta verde)
+pz_out = pz_ned;   % abajo NED    → +Z Gazebo (arriba)
+
+% --- Cuaternión: rotación en Z ---
+cz = 0.0;  sz = 1.0;
+w_out = cz*w_in - sz*z_in;
+x_out = cz*x_in - sz*y_in;
+y_out = cz*y_in + sz*x_in;
+z_out = cz*z_in + sz*w_in;
+
+----------------------------------------------------------
+BLOQUE [9]: pid_control_V4/MATLAB Function-ned_to_imu
+----------------------------------------------------------
+function [w_out, x_out, y_out, z_out] = ...
+         ned_to_imu(w_in, x_in, y_in, z_in)
+
+% Mismo cuaternión que ned_to_odometry (Gazebo correcto)
+cz = 0.0;  sz = 1.0;
+w1 = cz*w_in - sz*z_in;
+x1 = cz*x_in - sz*y_in;
+y1 = cz*y_in + sz*x_in;
+z1 = cz*z_in + sz*w_in;
+
+% Corrección de ejes NED→ENU para RViz
+w_out =  z1;
+x_out = -y1;
+y_out =  x1;
+z_out =  -w1;
+
+----------------------------------------------------------
+BLOQUE [10]: pid_control_V4/MATLAB Function-ned_to_odometry
+----------------------------------------------------------
+function [px_out, py_out, pz_out, x_out, y_out, z_out, w_out ] = ...
+         ned_to_odometry(w_in, x_in, y_in, z_in, px_ned, py_ned, pz_ned)
+
+px_out =  -px_ned;
+py_out = py_ned;
+pz_out = -pz_ned;
+
+cz = 0.0;  sz = 1.0;
+w1 = cz*w_in - sz*z_in;
+x1 = cz*x_in - sz*y_in;
+y1 = cz*y_in + sz*x_in;
+z1 = cz*z_in + sz*w_in;
+
+w_out =  z1;
+x_out = -y1;
+y_out =  x1;
+z_out =  w1;
+
+wz =  0.7071; zz = +0.7071;
+w2 = wz*w_out - zz*z_out;
+x2 = wz*x_out + zz*y_out;
+y2 = wz*y_out - zz*x_out;
+z2 = wz*z_out + zz*w_out;
+
+w_out = w2; x_out = x2; y_out = y2; z_out = z2;
+
+----------------------------------------------------------
+BLOQUE [11]: pid_control_V4/MATLAB Function-MODELO
 ----------------------------------------------------------
 function [stringOut, lengthOut] = frameToROS()
 
@@ -89,25 +215,24 @@ end
 
 
 ----------------------------------------------------------
-BLOQUE [6]: pid_control_V4/MATLAB Function-ned_to_gazebo
+BLOQUE [12]: pid_control_V4/MATLAB Function2
 ----------------------------------------------------------
-function [w_out, x_out, y_out, z_out, px_out, py_out, pz_out] = ...
-         ned_to_gazebo(w_in, x_in, y_in, z_in, px_ned, py_ned, pz_ned)
-
-% --- Posicion NED -> Gazebo ENU ---
-px_out = -px_ned;   % derecha NED  → +X Gazebo
-py_out = py_ned;   % adelante NED → +Y Gazebo (morro apunta verde)
-pz_out = pz_ned;   % abajo NED    → +Z Gazebo (arriba)
-
-% --- Cuaternión: rotación en Z ---
-cz = 0.0;  sz = 1.0;
-w_out = cz*w_in - sz*z_in;
-x_out = cz*x_in - sz*y_in;
-y_out = cz*y_in + sz*x_in;
-z_out = cz*z_in + sz*w_in;
+function [vx_enu, vy_enu, vz_enu] = twist_stamped(vx_ned, vy_ned, vz_ned)
+    vx_enu =  double(vy_ned);   % Out2 del SUBSYSTEM_MODEL → v (lateral)
+    vy_enu =  double(vx_ned);   % Out1 del SUBSYSTEM_MODEL → u (longitudinal)
+    vz_enu = -double(vz_ned);   % Out3 del SUBSYSTEM_MODEL → w (vertical, invertido)
+end
 
 ----------------------------------------------------------
-BLOQUE [7]: pid_control_V4/SUBSYSTEM_MODEL/MATLAB Function - MODEL
+BLOQUE [13]: pid_control_V4/MATLAB Function-clocl
+----------------------------------------------------------
+function [sec, nsec] = getStamp(t)
+    sec  = int32(floor(t));
+    nsec = uint32((t - floor(t)) * 1e9);
+end
+
+----------------------------------------------------------
+BLOQUE [14]: pid_control_V4/SUBSYSTEM_MODEL/MATLAB Function - MODEL
 ----------------------------------------------------------
 function [XDOT, Va_out, CL_total, h_out, mu_Lw_out, mu_Dw_out] = Model(X, U, U_wind, W_wind)
 % Modelo Dinámico del Ekranoplano AirFish 8 (Sincronizado)
@@ -303,7 +428,7 @@ V_NED = [R(1,:)*V_body; R(2,:)*V_body; R(3,:)*V_body];
 end
 
 ----------------------------------------------------------
-BLOQUE [8]: pid_control_V4/SUBSYSTEM_MODEL/MATLAB Function-reset
+BLOQUE [15]: pid_control_V4/SUBSYSTEM_MODEL/MATLAB Function-reset
 ----------------------------------------------------------
 function x_reset = fcn(x)
     x_reset = x;
